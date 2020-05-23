@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <!-- USE DEVELOPMENT VERSION -->
+    <script src="./k.min.js"></script>
+	<script src="./myfib.min.js"></script>
+	<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	-->
+    <meta charset="utf-8" />
+    <title>Fib Demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+.button {
+
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+
+}
+#container {
+  height: 100vh;
+  overflow: auto;
+}
+.input-box {
+  background-color: lightblue;
+  text-align: center;
+}
+    </style>
+  </head>
+
+  <body>
+  
+    <div class='input-box'  >
+
+    &nbsp &nbsp &nbsp 
+	
+    <button class="button" id="button"  onclick="createFibTree()" style="background-color:#ceecf0">Fibonacci</button>
+	<input id='base' width="2" maxlength="2" size="2" type='text'  style="font-size: 16pt;text-align:center"value="5">
+	
+	
+	    
+		
+		<div style="border: 0.5px solid #567e85;">
+		<label for="RefTime1">Ref Rates:</label>
+        <input type="text" id="RefTime1"  value="1.0" width="4" maxlength="4" size="4" style="text-align:center">
+		<input type="text" id="RefTime2"  value="0.25" width="4" maxlength="4" size="4" style="text-align:center">
+		&nbsp &nbsp &nbsp<label for="Time1">Times:</label>
+        <input type="text" id="Time1"  value="10" width="4" maxlength="4" size="4" style="text-align:center">
+		<input type="text" id="Time2"  value="12" width="4" maxlength="4" size="4" style="text-align:center">
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		<input type="radio" id="Large" name="radius" value=25>
+		<label for="Large">Large</label>
+		<input type="radio" id="Medium"  name="radius" value=20 checked>
+		<label for="Medium">Medium</label>
+		<input type="radio" id="Small"  name="radius" value="15">
+		<label for="Small">Small</label>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+		<input type="radio" id="st1" name="DrawingStyle" value=25 checked>
+		<label for="st1">Drawing Style 1</label>
+		<input type="radio" id="st2"  name="DrawingStyle" value=20>
+		<label for="st2">Drawing Style 1</label>
+		&nbsp &nbsp &nbsp
+		<input type="text" id="delta"  value="10" width="4" maxlength="4" size="4" style="text-align:center">
+		<label for="delta">&Delta;</label>
+		</div>
+	
+	<br>
+
+     <button class="button" id = "dq" onclick="divConq()" disabled> Div&Conq </button>
+	 <button class="button" id = "mm" onclick="meMoise()" disabled> Memoisation </button>
+	 <button class="button" id = "dp" onclick="dynP()" disabled> Dynamic Prog </button>
+
+	 <br><br><br>
+  </div>
+    <div id="container"></div>
+    
+    
+  </body>
+</html>
